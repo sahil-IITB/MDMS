@@ -1,0 +1,35 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Sowrabh",
+            "email": "sowrabh@gmail.com",
+            "role": "Admin"
+        },
+        {
+            "id": "2",
+            "name": "Rahul",
+            "email": "rahul@gmail.com",
+            "role": "User"
+        },
+        {
+            "id": "3",
+            "name": "Kiran",
+            "email": "kiran@gmail.com",
+            "role": "User"
+        }
+    ],
+    "dailyData": [
+        { "id": "1", "date": "2026-11-01", "units": 12.5 },
+        { "id": "2", "date": "2026-11-02", "units": 14.2 },
+        { "id": "3", "date": "2026-11-03", "units": 11.8 }
+    ],
+    "weeklyData": [
+        { "id": "1", "week": "Week 1", "units": 85.4 },
+        { "id": "2", "week": "Week 2", "units": 92.1 }
+    ],
+    "monthlyData": [
+        { "id": "1", "month": "October", "units": 370.6 },
+        { "id": "2", "month": "November", "units": 348.9 }
+    ]
+}
