@@ -1,18 +1,21 @@
-import PageHeader from "./shared/components/PageHeader";
+import { useState } from "react";
+import FormField from "./shared/components/FormField/FormField";
+
 
 
 function App() {
+    const [email, setEmail] = useState("");
     return (
-        <div style={{padding : "24px"}}>
-            <PageHeader 
-            title="Dashboard"
-            description = "Overview of your electricity  consumption and account "
-            actions = {
-                <>
-                    <button>Export</button>
-                    <button>Edit</button>
-                </>
-            }
+        <div style={{maxWidth: "400px", padding: "24px"}}>
+            <FormField 
+                label="Email Address"
+                name="Email"
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={setEmail}
+                helperText="Enter your registered email address"
+                required
             />
         </div>
     );
