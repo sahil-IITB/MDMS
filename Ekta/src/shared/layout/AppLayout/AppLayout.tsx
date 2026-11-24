@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import { useState } from "react";
 import '../../theme/theme.css';
 import './AppLayout.css';
+import { useTheme } from "../../context/useTheme";
 
 /**
  * AppLayout Component
@@ -21,12 +22,8 @@ import './AppLayout.css';
  */
 
 function AppLayout(){
-    const [theme, setTheme] = useState<"light" | "dark">("light");
+    const {theme, toggleTheme} = useTheme();
     const [role, setRole] = useState("User");
-
-    const toggleTheme = () => {
-        setTheme((prevTheme) => prevTheme === 'light' ? "dark" : "light");
-    };
 
     return (
         <div className={`app-layout app-layout--${theme}`}>
