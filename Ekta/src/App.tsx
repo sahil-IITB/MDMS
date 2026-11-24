@@ -1,7 +1,13 @@
-import Loader from "./shared/components/Loader/Loader"
+import Skeleton from "./shared/components/Loader/Skeleton";
 function App() {
     return (
-        <Loader size="lg" color="#2563eb" />
+        <div className="dashboard-card">
+            <Skeleton variant="text" width="40%" height="14px" />
+
+            <Skeleton variant="text" width="60%" height="28px" />
+
+            <Skeleton variant="text" width="80%" height="12px" />
+        </div>
     );
 }
 
