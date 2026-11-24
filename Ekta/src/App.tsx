@@ -1,13 +1,30 @@
-import Skeleton from "./shared/components/Loader/Skeleton";
+import { useState } from "react";
+import Button from "./shared/components/Button/Button";
+import ConfirmDialog from "./shared/components/ConfirmDialog/ConfirmDialog";
+
 function App() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleDelete = () => {
+        alert("Action Confrimed!");
+        setIsOpen(false);
+    };
+
     return (
-        <div className="dashboard-card">
-            <Skeleton variant="text" width="40%" height="14px" />
+        <>
+            <Button onClick={() => setIsOpen(true)}>Delete Record</Button>
 
-            <Skeleton variant="text" width="60%" height="28px" />
-
-            <Skeleton variant="text" width="80%" height="12px" />
-        </div>
+            <ConfirmDialog
+                isOpen={isOpen}
+                title="Delete Record"
+                message="Are you sure you want to delete this record? This action cannot be undone."
+                confirmText="Delete"
+                cancelText="Cancel"
+                variant="danger"
+                onConfirm={handleDelete}
+                onCancel={() => setIsOpen(false)}
+            />
+        </>
     );
 }
 
