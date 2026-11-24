@@ -1,12 +1,11 @@
 import { Outlet } from "react-router-dom";
 import './AppLayout.css';
+import Sidebar from "../Sidebar/Sidebar";
 
 function AppLayout(){
     return (
         <div className="app-layout">
-            <aside className="app-layout__sidebar">
-                SideBar
-            </aside>
+            <Sidebar />
 
             <div className="app-layout__main">
                 <header className="app-layout__header">
