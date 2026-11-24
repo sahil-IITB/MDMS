@@ -1,6 +1,29 @@
 import type { ReactNode } from "react";
 import "./PageHeader.css";
 
+/**
+ * PageHeader Component
+ *
+ * A reusable page header for displaying a page title, optional description,
+ * and optional action elements such as buttons.
+ *
+ * Props:
+ * - title: The main heading of the page (required).
+ * - description: Supporting text displayed below the title (optional).
+ * - actions: ReactNode containing buttons or other action elements (optional).
+ *
+ * Usage:
+ *
+ * <PageHeader
+ *   title="Dashboard"
+ *   description="Overview of your electricity consumption and account"
+ *   actions={<button>Download Report</button>}
+ * />
+ *
+ * This component is used to maintain a consistent header layout
+ * across different pages of the application.
+ */
+
 interface PageHeaderProps{
     title : string;
     description? : string;
