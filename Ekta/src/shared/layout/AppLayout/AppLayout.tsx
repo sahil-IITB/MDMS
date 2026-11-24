@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import Header from "../Header/Header";
 import { useState } from "react";
+import '../../theme/theme.css';
 import './AppLayout.css';
 
 /**
@@ -28,7 +29,7 @@ function AppLayout(){
     };
 
     return (
-        <div className="app-layout">
+        <div className={`app-layout app-layout--${theme}`}>
             <Sidebar />
 
             <div className="app-layout__main">
