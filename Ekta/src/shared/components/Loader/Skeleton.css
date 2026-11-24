@@ -1,0 +1,61 @@
+.skeleton {
+    display: block;
+    flex-shrink: 0;
+    background: var(--skeleton-bg, #e5e7eb);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer animation */
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--skeleton-highlight, rgba(255, 255, 255, 0.65)),
+        transparent
+    );
+    animation: skeleton-shimmer 1.5s infinite;
+}
+
+/* Variants */
+
+.skeleton--text {
+    transform: scaleY(0.85);
+    transform-origin: center;
+}
+
+.skeleton--circular {
+    border-radius: 50%;
+}
+
+.skeleton--rectangular {
+    border-radius: 8px;
+}
+
+/* Animation */
+
+@keyframes skeleton-shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Dark theme */
+
+[data-theme="dark"] .skeleton {
+    --skeleton-bg: #2d3440;
+    --skeleton-highlight: rgba(255, 255, 255, 0.08);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .skeleton::after {
+        animation: none;
+    }
+}

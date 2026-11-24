@@ -1,16 +1,12 @@
-import Button from "./shared/components/Button/Button";
-
+import Skeleton from "./shared/components/Loader/Skeleton";
 function App() {
     return (
-        <div style={{display: "flex", gap:"12px", flexWrap: "wrap", padding: "20px"}}>
-            <Button>Primary</Button>
+        <div className="dashboard-card">
+            <Skeleton variant="text" width="40%" height="14px" />
 
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="outline">Outline</Button>
-            <Button variant="danger">Danger</Button>
-            <Button size="sm">Small</Button>
-            <Button size="lg">Large</Button>
-            <Button disabled>Disabled</Button>
+            <Skeleton variant="text" width="60%" height="28px" />
+
+            <Skeleton variant="text" width="80%" height="12px" />
         </div>
     );
 }
