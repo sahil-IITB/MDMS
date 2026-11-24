@@ -1,23 +1,16 @@
-import { useState } from "react";
-import Modal from "./shared/components/Modal/Modal"
+import Button from "./shared/components/Button/Button";
 
 function App() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    return (
+        <div style={{display: "flex", gap:"12px", flexWrap: "wrap", padding: "20px"}}>
+            <Button>Primary</Button>
 
-    return(
-        <div>
-            <button onClick={() => setIsModalOpen(true)}>Open Modal</button>
-
-            <Modal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-                title="User Details"
-            >
-                <p>This is Modal Content</p>
-                <p>You Can put forms, text, or other components here</p>
-
-                <button onClick={() => setIsModalOpen(false)}>Close</button>
-            </Modal>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="danger">Danger</Button>
+            <Button size="sm">Small</Button>
+            <Button size="lg">Large</Button>
+            <Button disabled>Disabled</Button>
         </div>
     );
 }
