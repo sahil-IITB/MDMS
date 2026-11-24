@@ -1,0 +1,239 @@
+/* Light Theme */
+.login-page--light {
+    --background: #f3f6fb;
+    --surface: #ffffff;
+    --text-primary: #172033;
+    --text-secondary: #64748b;
+    --border: #e2e8f0;
+    --primary: #2563eb;
+}
+
+/* Dark Theme */
+.login-page--dark {
+    --background: #111827;
+    --surface: #1f2937;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border: #374151;
+    --primary: #60a5fa;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+
+    background: var(--background, #f3f6fb);
+    color: var(--text-primary, #172033);
+}
+
+/* Login Theme Toggle */
+.login-page {
+    position: relative;
+}
+
+.login-theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border-radius: 50%;
+    color: var(--text-primary);
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.login-theme-toggle:hover {
+    background: var(--border);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 40px;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 16px;
+
+    background: var(--surface, #ffffff);
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Branding */
+.login-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.login-brand__logo {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    background: var(--primary, #2563eb);
+    color: #ffffff;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.login-brand h1 {
+    margin: 12px 0 4px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.login-brand p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-secondary, #64748b);
+}
+
+/* Heading */
+.login-heading {
+    margin-bottom: 24px;
+}
+
+.login-heading h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.login-heading p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-secondary, #64748b);
+}
+
+/* Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-password-field {
+    position: relative;
+}
+
+.login-password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    z-index: 1;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+
+    color: var(--primary, #2563eb);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.login-password-toggle:hover {
+    background: transparent;
+    opacity: 0.75;
+}
+
+/* Login Options */
+.login-form__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: -4px;
+}
+
+.login-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
+    color: var(--text-secondary, #64748b);
+    cursor: pointer;
+}
+
+.login-remember input {
+    accent-color: var(--primary, #2563eb);
+    cursor: pointer;
+}
+
+/* Forgot Password - Custom Button styled as text link */
+.login-forgot {
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+
+    color: var(--primary, #2563eb);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.login-forgot:hover {
+    background: transparent;
+    text-decoration: underline;
+}
+
+/* Feedback */
+.login-success {
+    padding: 12px;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+
+    background: #f0fdf4;
+    color: #166534;
+
+    font-size: 13px;
+}
+
+/* Footer */
+.login-footer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border, #e2e8f0);
+    text-align: center;
+}
+
+.login-footer p {
+    margin: 0;
+    color: var(--text-secondary, #64748b);
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-page {
+        padding: 16px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+    }
+
+    .login-heading h2 {
+        font-size: 22px;
+    }
+}
