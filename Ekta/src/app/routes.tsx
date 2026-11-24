@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import AppLayout from "../shared/layout/AppLayout/AppLayout";
 
 function PlaceholderPage({title}: {title:string}) {
     return (
@@ -18,12 +19,14 @@ function AppRoutes() {
             <Route path="/reset-password" element={<PlaceholderPage title="Reset Password" />} />
         
             {/*================= END-USER MODULE =================*/}
-            <Route path="/dashboard" element={<PlaceholderPage title="End-user Dashboard" />} />
-            <Route path="/bills" element={<PlaceholderPage title="Bills & Payments" />} />
-            <Route path="/bills/:billId" element={<PlaceholderPage title="Bill Details" />} />
-            <Route path="/meter-data" element={<PlaceholderPage title="Meter Data" />} />
-            <Route path="/alerts" element={<PlaceholderPage title="End-User Alerts" />} />
-            <Route path="/profile" element={<PlaceholderPage title="Profile & Settings" />} />
+            <Route element={<AppLayout />}>
+                <Route path="/dashboard" element={<PlaceholderPage title="End-user Dashboard" />} />
+                <Route path="/bills" element={<PlaceholderPage title="Bills & Payments" />} />
+                <Route path="/bills/:billId" element={<PlaceholderPage title="Bill Details" />} />
+                <Route path="/meter-data" element={<PlaceholderPage title="Meter Data" />} />
+                <Route path="/alerts" element={<PlaceholderPage title="End-User Alerts" />} />
+                <Route path="/profile" element={<PlaceholderPage title="Profile & Settings" />} />
+            </Route>
 
             {/* ================= ZONE ADMIN MODULE ================= */}
             <Route path="/zone" element={<Navigate to="/zone/dashboard" replace />} />
@@ -31,7 +34,7 @@ function AppRoutes() {
             <Route path="/zone/meters" element={<PlaceholderPage title="Zone Meter Management" />} />
             <Route path="/zone/meters/:meterId" element={<PlaceholderPage title="Zone Meter Details" />} />
             <Route path="/zone/users" element={<PlaceholderPage title="Zone User Management" />} />
-            <Route path="zone/reports" element={<PlaceholderPage title="Zone Reports & Analytics" />} />
+            <Route path="/zone/reports" element={<PlaceholderPage title="Zone Reports & Analytics" />} />
             <Route path="/zone/alerts" element={<PlaceholderPage title="Zone Alerts" />} />
             <Route path="/zone/settings" element={<PlaceholderPage title="Zone Settings" />} />
 
@@ -49,7 +52,7 @@ function AppRoutes() {
 
             {/* ================= DEFAULT ROUTES ================= */}
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
-            <Route path="" element={<PlaceholderPage title="404 - Page Not Found" />} />
+            <Route path="*" element={<PlaceholderPage title="404 - Page Not Found" />} />
         </Routes>
     );
 }

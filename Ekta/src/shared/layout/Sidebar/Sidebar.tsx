@@ -7,6 +7,24 @@ import {
     Zap
 } from "lucide-react"
 import { NavLink } from "react-router-dom";
+import './Sidebar.css';
+
+/**
+ * Sidebar Component
+ *
+ * Provides the primary navigation for the MDMS application.
+ * Displays the application branding and links to the main pages.
+ *
+ * Features:
+ * - Navigation using React Router NavLink.
+ * - Automatic active route highlighting.
+ * - Icons for each navigation item.
+ *
+ * Usage:
+ * Render inside AppLayout to provide navigation across the application.
+ */
+
+
 
 const navItems = [
     { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
