@@ -1,5 +1,6 @@
 import { useEffect, type ReactNode } from "react";
 import "./Modal.css";
+import Button from "../Button/Button";
 
 /**
  * Modal Component
@@ -80,14 +81,15 @@ function Modal({
                 <div className="modal-header">
                     <h2 id="modal-title">{title}</h2>
 
-                    <button
+                    <Button
+                        variant="secondary"
+                        size="sm"
                         className="modal-close"
-                        type="button"
                         onClick={onClose}
                         aria-label="Close Modal"
                     >
                         &times;
-                    </button>
+                    </Button>
                 </div>
 
                 <div className="modal-content">
