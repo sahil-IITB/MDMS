@@ -1,0 +1,54 @@
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    min-height: 24px;
+    padding: 4px 9px;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.status-badge__dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.status-badge--success {
+    color: var(--success, #16a34a);
+    background-color: rgba(22, 163, 74, 0.1);
+    border-color: rgba(22, 163, 74, 0.18);
+}
+
+.status-badge--warning {
+    color: #b45309;
+    background-color: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.status-badge--danger {
+    color: var(--danger, #dc2626);
+    background-color: rgba(220, 38, 38, 0.1);
+    border-color: rgba(220, 38, 38, 0.18);
+}
+
+.status-badge--info {
+    color: var(--accent, #2563eb);
+    background-color: var(--accent-bg, #eff6ff);
+    border-color: rgba(37, 99, 235, 0.18);
+}
+
+.status-badge--neutral {
+    color: var(--text-muted, #64748b);
+    background-color: var(--bg, #f4f7fb);
+    border-color: var(--border, #e2e8f0);
+}
