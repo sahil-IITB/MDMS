@@ -10,6 +10,15 @@ export interface Bill {
     status: BillStatus;
 }
 
+export interface BillDay {
+    id: string;
+    billId: string;
+    date: string;
+    reading: number;
+    consumption: number;
+    cost: number;
+}
+
 export interface PaginatedBillsResponse {
     first: number;
     prev: number | null;
