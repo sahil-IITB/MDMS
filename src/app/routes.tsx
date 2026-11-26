@@ -5,6 +5,7 @@ import ForgotPassword from "../features/auth/pages/ForgotPassword";
 import ResetPassword from "../features/auth/pages/ResetPassword";
 import Dashboard from "../features/end-user/pages/Dashboard";
 import BillsPayments from "../features/end-user/pages/BillsPayments";
+import BillDetails from "../features/end-user/pages/BillDetails";
 
 function PlaceholderPage({title}: {title:string}) {
     return (
@@ -28,7 +29,7 @@ function AppRoutes() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/user/dashboard" element={<Dashboard />} />
                 <Route path="/user/bills" element={<BillsPayments />} />
-                <Route path="/user/bills/:billId" element={<PlaceholderPage title="Bill Details" />} />
+                <Route path="/user/bills/:billId" element={<BillDetails />} />
                 <Route path="/meter-data" element={<PlaceholderPage title="Meter Data" />} />
                 <Route path="/alerts" element={<PlaceholderPage title="End-User Alerts" />} />
                 <Route path="/profile" element={<PlaceholderPage title="Profile & Settings" />} />
