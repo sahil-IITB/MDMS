@@ -47,7 +47,8 @@ function Header({
 }: HeaderProps) {
     const location = useLocation();
 
-    const pageTitle = pageTitles[location.pathname] ?? "MDMS";
+    const pageTitle = pageTitles[location.pathname]
+        ?? (location.pathname.startsWith("/user/bills/") ? "Bill Details" : "MDMS");
 
     return (
         <header className="header">
