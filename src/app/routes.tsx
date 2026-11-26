@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import AppLayout from "../shared/layout/AppLayout/AppLayout";
 import Login from "../features/auth/pages/Login";
 import ForgotPassword from "../features/auth/pages/ForgotPassword";
+import ResetPassword from "../features/auth/pages/ResetPassword";
 
 function PlaceholderPage({title}: {title:string}) {
     return (
@@ -18,7 +19,7 @@ function AppRoutes() {
             {/*================= AUTHENTICATION =================*/}
             <Route path="/login" element={<Login />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/reset-password" element={<PlaceholderPage title="Reset Password" />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
         
             {/*================= END-USER MODULE =================*/}
             <Route element={<AppLayout />}>
