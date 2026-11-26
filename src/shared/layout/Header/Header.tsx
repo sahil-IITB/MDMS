@@ -36,7 +36,7 @@ const pageTitles : Record<string, string> = {
     "/user/dashboard": "Dashboard",
     "/user/bills": "Bills & Payments",
     "/user/meter-data": "Meter Data",
-    "/alerts": "Alerts",
+    "/user/alerts": "Alerts & Notifications",
     "/profile": "Profile & Settings"
 };
 
