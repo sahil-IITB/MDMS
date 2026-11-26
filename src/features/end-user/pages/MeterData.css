@@ -1,0 +1,154 @@
+.meter-data-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: var(--text);
+}
+
+.meter-data-page > .page-header {
+    margin-bottom: 0;
+}
+
+.meter-data-page .page-header__title {
+    color: var(--text);
+}
+
+.meter-data-page .page-header__description {
+    color: var(--text-muted);
+}
+
+.meter-date-filter {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(300px, 1.4fr);
+    align-items: center;
+    gap: 20px;
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+}
+
+.meter-date-filter__heading,
+.meter-readings-panel__title {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.meter-date-filter__icon,
+.meter-readings-panel__icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--accent-bg);
+    color: var(--accent);
+}
+
+.meter-date-filter h2,
+.meter-readings-panel h2 {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.meter-date-filter p,
+.meter-readings-panel__title p {
+    margin-top: 4px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.meter-date-filter__fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.meter-data-error {
+    grid-column: 1 / -1;
+    color: #dc2626 !important;
+    font-size: 13px !important;
+}
+
+.meter-readings-panel {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+}
+
+.meter-readings-panel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.meter-readings-panel__meter {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.meter-readings-panel__meter svg {
+    color: var(--accent);
+}
+
+.meter-readings-panel .empty-state {
+    padding: 32px 16px;
+}
+
+.meter-data-error--panel {
+    margin: 20px;
+}
+
+.meter-readings-panel__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 64px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.meter-readings-panel__footer .pagination {
+    width: auto;
+}
+
+@media (max-width: 760px) {
+    .meter-date-filter {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .meter-date-filter__fields {
+        grid-template-columns: 1fr;
+    }
+
+    .meter-readings-panel__header,
+    .meter-readings-panel__footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .meter-readings-panel__footer .pagination {
+        align-self: center;
+    }
+}
