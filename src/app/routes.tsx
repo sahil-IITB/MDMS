@@ -3,6 +3,7 @@ import AppLayout from "../shared/layout/AppLayout/AppLayout";
 import Login from "../features/auth/pages/Login";
 import ForgotPassword from "../features/auth/pages/ForgotPassword";
 import ResetPassword from "../features/auth/pages/ResetPassword";
+import Dashboard from "../features/end-user/pages/Dashboard";
 
 function PlaceholderPage({title}: {title:string}) {
     return (
@@ -23,7 +24,8 @@ function AppRoutes() {
         
             {/*================= END-USER MODULE =================*/}
             <Route element={<AppLayout />}>
-                <Route path="/dashboard" element={<PlaceholderPage title="End-user Dashboard" />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/user/dashboard" element={<Dashboard />} />
                 <Route path="/bills" element={<PlaceholderPage title="Bills & Payments" />} />
                 <Route path="/bills/:billId" element={<PlaceholderPage title="Bill Details" />} />
                 <Route path="/meter-data" element={<PlaceholderPage title="Meter Data" />} />
