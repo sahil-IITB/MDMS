@@ -8,6 +8,7 @@ import BillsPayments from "../features/end-user/pages/BillsPayments";
 import BillDetails from "../features/end-user/pages/BillDetails";
 import MeterData from "../features/end-user/pages/MeterData";
 import Alerts from "../features/end-user/pages/Alerts";
+import ProfileSettings from "../features/end-user/pages/ProfileSettings";
 
 function PlaceholderPage({title}: {title:string}) {
     return (
@@ -34,7 +35,7 @@ function AppRoutes() {
                 <Route path="/user/bills/:billId" element={<BillDetails />} />
                 <Route path="/user/meter-data" element={<MeterData />} />
                 <Route path="/user/alerts" element={<Alerts />} />
-                <Route path="/profile" element={<PlaceholderPage title="Profile & Settings" />} />
+                <Route path="/profile" element={<ProfileSettings />} />
             </Route>
 
             {/* ================= ZONE ADMIN MODULE ================= */}

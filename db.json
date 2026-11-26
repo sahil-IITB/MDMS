@@ -10,7 +10,12 @@
             "id": "2",
             "name": "Rahul",
             "email": "rahul@gmail.com",
-            "role": "User"
+            "role": "User",
+            "phone": "+91 98765 43210",
+            "notificationPreferences": {
+                "email": true,
+                "sms": false
+            }
         },
         {
             "id": "3",
