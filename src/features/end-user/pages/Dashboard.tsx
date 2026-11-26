@@ -202,7 +202,7 @@ function Dashboard() {
                         <span><strong>View detailed usage</strong><small>Explore meter readings</small></span>
                         <ArrowUpRight className="dashboard-action__arrow" size={17} />
                     </Button>
-                    <Button className="dashboard-action" variant="outline" onClick={() => navigate("/alerts")}>
+                    <Button className="dashboard-action" variant="outline" onClick={() => navigate("/user/alerts")}>
                         <Bell size={19} />
                         <span><strong>Manage notifications</strong><small>Review your alerts</small></span>
                         <ArrowUpRight className="dashboard-action__arrow" size={17} />
