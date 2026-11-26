@@ -187,12 +187,12 @@ function Dashboard() {
                     </div>
                 </div>
                 <div className="dashboard-actions__grid">
-                    <Button className="dashboard-action" variant="outline" onClick={() => navigate("/bills")}>
+                    <Button className="dashboard-action" variant="outline" onClick={() => navigate("/user/bills")}>
                         <CreditCard size={19} />
                         <span><strong>Pay bill</strong><small>Review your amount due</small></span>
                         <ArrowUpRight className="dashboard-action__arrow" size={17} />
                     </Button>
-                    <Button className="dashboard-action" variant="outline" onClick={() => navigate("/bills")}>
+                    <Button className="dashboard-action" variant="outline" onClick={() => navigate("/user/bills")}>
                         <ReceiptText size={19} />
                         <span><strong>View bill history</strong><small>See previous bills</small></span>
                         <ArrowUpRight className="dashboard-action__arrow" size={17} />

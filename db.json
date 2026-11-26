@@ -47,6 +47,20 @@
             "lastPaymentDate": "2026-11-03"
         }
     ],
+    "bills": [
+        { "id": "bill-2026-11", "userId": "2", "month": "2026-11", "monthLabel": "November 2026", "amount": 2486.5, "dueDate": "2026-11-30", "status": "Pending" },
+        { "id": "bill-2026-10", "userId": "2", "month": "2026-10", "monthLabel": "October 2026", "amount": 2240, "dueDate": "2026-10-31", "status": "Paid" },
+        { "id": "bill-2026-09", "userId": "2", "month": "2026-09", "monthLabel": "September 2026", "amount": 2318.75, "dueDate": "2026-09-30", "status": "Paid" },
+        { "id": "bill-2026-08", "userId": "2", "month": "2026-08", "monthLabel": "August 2026", "amount": 2186.25, "dueDate": "2026-08-31", "status": "Paid" },
+        { "id": "bill-2026-07", "userId": "2", "month": "2026-07", "monthLabel": "July 2026", "amount": 2524, "dueDate": "2026-07-31", "status": "Overdue" },
+        { "id": "bill-2026-06", "userId": "2", "month": "2026-06", "monthLabel": "June 2026", "amount": 2389.5, "dueDate": "2026-06-30", "status": "Paid" },
+        { "id": "bill-2026-05", "userId": "2", "month": "2026-05", "monthLabel": "May 2026", "amount": 2297.25, "dueDate": "2026-05-31", "status": "Overdue" },
+        { "id": "bill-2026-04", "userId": "2", "month": "2026-04", "monthLabel": "April 2026", "amount": 2168, "dueDate": "2026-04-30", "status": "Paid" },
+        { "id": "bill-2026-03", "userId": "2", "month": "2026-03", "monthLabel": "March 2026", "amount": 2206.75, "dueDate": "2026-03-31", "status": "Paid" },
+        { "id": "bill-2026-02", "userId": "2", "month": "2026-02", "monthLabel": "February 2026", "amount": 2450, "dueDate": "2026-02-28", "status": "Overdue" },
+        { "id": "bill-2026-01", "userId": "2", "month": "2026-01", "monthLabel": "January 2026", "amount": 2138.5, "dueDate": "2026-01-31", "status": "Paid" },
+        { "id": "bill-2025-12", "userId": "2", "month": "2025-12", "monthLabel": "December 2025", "amount": 2196, "dueDate": "2025-12-31", "status": "Paid" }
+    ],
     "dayConsumption": [
         { "id": "1", "label": "00:00", "current": 0.3, "previous": 0.4 },
         { "id": "2", "label": "01:00", "current": 0.2, "previous": 0.3 },
