@@ -33,10 +33,11 @@ interface HeaderProps{
 
 const pageTitles : Record<string, string> = {
     "/dashboard": "Dashboard",
-    "/bills": "Bills & Payments",
+    "/user/dashboard": "Dashboard",
+    "/user/bills": "Bills & Payments",
     "/user/meter-data": "Meter Data",
     "/alerts": "Alerts",
-    "/profile": "Profile & Set"
+    "/profile": "Profile & Settings"
 };
 
 function Header({
