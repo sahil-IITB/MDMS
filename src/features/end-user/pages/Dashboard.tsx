@@ -197,7 +197,7 @@ function Dashboard() {
                         <span><strong>View bill history</strong><small>See previous bills</small></span>
                         <ArrowUpRight className="dashboard-action__arrow" size={17} />
                     </Button>
-                    <Button className="dashboard-action" variant="outline" onClick={() => navigate("/meter-data")}>
+                    <Button className="dashboard-action" variant="outline" onClick={() => navigate("/user/meter-data")}>
                         <Gauge size={19} />
                         <span><strong>View detailed usage</strong><small>Explore meter readings</small></span>
                         <ArrowUpRight className="dashboard-action__arrow" size={17} />
