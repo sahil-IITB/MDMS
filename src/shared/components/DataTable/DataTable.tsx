@@ -28,7 +28,7 @@ function getSortableValue<T>(row: T, column: DataTableColumn<T>): unknown {
     return row[column.accessor];
 }
 
-function DataTable<T>({
+function DataTable<T>({ 
     columns,
     data,
     rowKey,
