@@ -1,0 +1,119 @@
+.data-table {
+    width: 100%;
+    overflow: hidden;
+
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 10px;
+    background-color: var(--surface, #ffffff);
+}
+
+.data-table__wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table__table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text, #1e293b);
+}
+
+.data-table__caption {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.data-table__head,
+.data-table__cell {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border, #e2e8f0);
+}
+
+.data-table__head {
+    background-color: var(--bg, #f4f7fb);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted, #64748b);
+}
+
+.data-table__head:last-child,
+.data-table__cell:last-child {
+    border-right: 0;
+}
+
+.data-table__head--left,
+.data-table__cell--left {
+    text-align: left;
+}
+
+.data-table__head--center,
+.data-table__cell--center {
+    text-align: center;
+}
+
+.data-table__head--right,
+.data-table__cell--right {
+    text-align: right;
+}
+
+.data-table__sort {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.data-table__sort:focus-visible {
+    outline: 2px solid var(--accent, #2563eb);
+    outline-offset: 3px;
+}
+
+.data-table__sort-icon {
+    color: var(--text-muted, #94a3b8);
+    font-size: 12px;
+}
+
+.data-table__sort-icon--active {
+    color: var(--accent, #2563eb);
+}
+
+.data-table tbody tr:last-child .data-table__cell {
+    border-bottom: 0;
+}
+
+.data-table tbody tr:hover .data-table__cell {
+    background-color: var(--accent-bg, #eff6ff);
+}
+
+.data-table__row--clickable {
+    cursor: pointer;
+}
+
+.data-table__status {
+    padding: 32px 16px;
+    text-align: center;
+    color: var(--text-muted, #64748b);
+}
+
+.data-table__table tbody tr:focus-within {
+    outline: 2px solid var(--accent, #2563eb);
+    outline-offset: -2px;
+}
+
+@media (max-width: 600px) {
+    .data-table {
+        border-radius: 8px;
+    }
+
+    .data-table__head,
+    .data-table__cell {
+        padding: 10px 12px;
+    }
+}
