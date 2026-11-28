@@ -1,0 +1,57 @@
+:root {
+    --chart-1: #4f46e5;
+    --chart-2: #0ea5e9;
+    --chart-3: #10b981;
+    --chart-4: #f59e0b;
+    --chart-5: #ef4444;
+    --chart-6: #8b5cf6;
+    --chart-7: #14b8a6;
+    --chart-8: #ec4899;
+    --chart-axis: #64748b;
+    --chart-grid: #e2e8f0;
+    --chart-cursor: rgba(148, 163, 184, 0.15);
+    --chart-success: #10b981;
+    --chart-danger: #ef4444;
+}
+
+.app-layout--dark {
+    --chart-1: #818cf8;
+    --chart-2: #38bdf8;
+    --chart-3: #34d399;
+    --chart-4: #fbbf24;
+    --chart-5: #f87171;
+    --chart-6: #a78bfa;
+    --chart-7: #2dd4bf;
+    --chart-8: #f472b6;
+    --chart-axis: #94a3b8;
+    --chart-grid: #334155;
+    --chart-cursor: rgba(148, 163, 184, 0.12);
+    --chart-success: #34d399;
+    --chart-danger: #f87171;
+}
+
+.donut {
+    position: relative;
+    width: 100%;
+}
+
+.donut__center {
+    position: absolute;
+    inset: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    color: var(--text, #0f172a);
+}
+
+.donut__center strong {
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.donut__center span {
+    font-size: 0.75rem;
+    color: var(--text-muted, #64748b);
+}

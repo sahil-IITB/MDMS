@@ -33,10 +33,11 @@ interface HeaderProps{
 
 const pageTitles : Record<string, string> = {
     "/dashboard": "Dashboard",
-    "/bills": "Bills & Payments",
-    "/meter-data": "Meter Data",
-    "/alerts": "Alerts",
-    "/profile": "Profile & Set"
+    "/user/dashboard": "Dashboard",
+    "/user/bills": "Bills & Payments",
+    "/user/meter-data": "Meter Data",
+    "/user/alerts": "Alerts & Notifications",
+    "/profile": "Profile & Settings"
 };
 
 function Header({
@@ -47,7 +48,8 @@ function Header({
 }: HeaderProps) {
     const location = useLocation();
 
-    const pageTitle = pageTitles[location.pathname] ?? "MDMS";
+    const pageTitle = pageTitles[location.pathname]
+        ?? (location.pathname.startsWith("/user/bills/") ? "Bill Details" : "MDMS");
 
     return (
         <header className="header">
