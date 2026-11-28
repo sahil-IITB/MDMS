@@ -28,9 +28,9 @@ import './Sidebar.css';
 
 const navItems = [
     { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-    { label: "Bills & Payments", path: "/user/bills", icon: Receipt },
-    { label: "Meter Data", path: "/user/meter-data", icon: Gauge },
-    { label: "Alerts", path: "/user/alerts", icon: Bell },
+    { label: "Bills & Payments", path: "/bills", icon: Receipt },
+    { label: "Meter Data", path: "/meter-data", icon: Gauge },
+    { label: "Alerts", path: "/alerts", icon: Bell },
     { label: "Profile & Settings", path: "/profile", icon: Settings },
 ];
 

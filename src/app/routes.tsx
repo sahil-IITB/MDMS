@@ -1,14 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AppLayout from "../shared/layout/AppLayout/AppLayout";
 import Login from "../features/auth/pages/Login";
-import ForgotPassword from "../features/auth/pages/ForgotPassword";
-import ResetPassword from "../features/auth/pages/ResetPassword";
-import Dashboard from "../features/end-user/pages/Dashboard";
-import BillsPayments from "../features/end-user/pages/BillsPayments";
-import BillDetails from "../features/end-user/pages/BillDetails";
-import MeterData from "../features/end-user/pages/MeterData";
-import Alerts from "../features/end-user/pages/Alerts";
-import ProfileSettings from "../features/end-user/pages/ProfileSettings";
 
 function PlaceholderPage({title}: {title:string}) {
     return (
@@ -24,18 +16,17 @@ function AppRoutes() {
         <Routes>
             {/*================= AUTHENTICATION =================*/}
             <Route path="/login" element={<Login />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/reset-password/:token" element={<ResetPassword />} />
+            <Route path="/forgot-password" element={<PlaceholderPage title="Forgot Password" />} />
+            <Route path="/reset-password" element={<PlaceholderPage title="Reset Password" />} />
         
             {/*================= END-USER MODULE =================*/}
             <Route element={<AppLayout />}>
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/user/dashboard" element={<Dashboard />} />
-                <Route path="/user/bills" element={<BillsPayments />} />
-                <Route path="/user/bills/:billId" element={<BillDetails />} />
-                <Route path="/user/meter-data" element={<MeterData />} />
-                <Route path="/user/alerts" element={<Alerts />} />
-                <Route path="/profile" element={<ProfileSettings />} />
+                <Route path="/dashboard" element={<PlaceholderPage title="End-user Dashboard" />} />
+                <Route path="/bills" element={<PlaceholderPage title="Bills & Payments" />} />
+                <Route path="/bills/:billId" element={<PlaceholderPage title="Bill Details" />} />
+                <Route path="/meter-data" element={<PlaceholderPage title="Meter Data" />} />
+                <Route path="/alerts" element={<PlaceholderPage title="End-User Alerts" />} />
+                <Route path="/profile" element={<PlaceholderPage title="Profile & Settings" />} />
             </Route>
 
             {/* ================= ZONE ADMIN MODULE ================= */}
