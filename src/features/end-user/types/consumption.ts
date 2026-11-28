@@ -4,6 +4,8 @@ export interface DailyData {
     date: string;
     units: number;
 }
+<<<<<<< HEAD
+=======
 
 export interface DashboardSummary {
     id: string;
@@ -25,3 +27,4 @@ export interface ConsumptionPoint {
     current: number;
     previous: number;
 }
+>>>>>>> 1daf4dd8f4a7b10bb7b08e7f1b5d0105416a1e3c
