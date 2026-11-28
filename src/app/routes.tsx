@@ -17,7 +17,7 @@ import {
     ZoneReports,
     ZoneSettings,
     ZoneUsers,
-} from "../features/zone-admin/pages/ZoneAdminPages";
+} from "../features/zone/pages/ZoneAdminPages";
 
 function PlaceholderPage({title}: {title:string}) {
     return (
