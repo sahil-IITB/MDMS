@@ -1,7 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import Header from "../Header/Header";
-import { useState } from "react";
 import '../../theme/theme.css';
 import './AppLayout.css';
 import { useTheme } from "../../context/useTheme";
@@ -23,7 +22,12 @@ import { useTheme } from "../../context/useTheme";
 
 function AppLayout(){
     const {theme, toggleTheme} = useTheme();
-    const [role, setRole] = useState("User");
+    const location = useLocation();
+    const role = location.pathname.startsWith("/zone")
+        ? "Zone Admin"
+        : location.pathname.startsWith("/enterprise")
+          ? "Enterprise Admin"
+          : "Consumer";
 
     return (
         <div className={`app-layout app-layout--${theme}`}>
@@ -34,7 +38,6 @@ function AppLayout(){
                     theme={theme}
                     onToggleTheme={toggleTheme}
                     role={role}
-                    onRoleChange={setRole}
                 />
 
                 <main className="app-layout__content">

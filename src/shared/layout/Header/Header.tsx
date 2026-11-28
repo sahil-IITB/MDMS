@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import { Moon, Sun, UserRound } from "lucide-react";
 import './Header.css'
@@ -28,7 +28,6 @@ interface HeaderProps{
     theme : "light" | "dark";
     onToggleTheme : () => void;
     role : string;
-    onRoleChange : (role: string) => void;
 }
 
 const pageTitles : Record<string, string> = {
@@ -37,19 +36,28 @@ const pageTitles : Record<string, string> = {
     "/user/bills": "Bills & Payments",
     "/user/meter-data": "Meter Data",
     "/user/alerts": "Alerts & Notifications",
-    "/profile": "Profile & Settings"
+    "/profile": "Profile & Settings",
+    "/zone/dashboard": "Zone dashboard",
+    "/zone/meters": "Meter management",
+    "/zone/users": "User management",
+    "/zone/reports": "Reports & analytics",
+    "/zone/alerts": "Zone alerts",
+    "/zone/settings": "Zone settings",
+    "/enterprise/dashboard": "Enterprise dashboard",
 };
 
 function Header({
     theme,
     onToggleTheme,
     role,
-    onRoleChange
 }: HeaderProps) {
     const location = useLocation();
+    const navigate = useNavigate();
 
     const pageTitle = pageTitles[location.pathname]
-        ?? (location.pathname.startsWith("/user/bills/") ? "Bill Details" : "MDMS");
+        ?? (location.pathname.startsWith("/user/bills/") ? "Bill Details"
+            : location.pathname.startsWith("/zone/meters/") ? "Meter details"
+            : location.pathname.startsWith("/enterprise/") ? "Enterprise" : "MDMS");
 
     return (
         <header className="header">
@@ -67,10 +75,14 @@ function Header({
                     <select
                         id="header-role"
                         value={role}
-                        onChange={(event) => onRoleChange(event.target.value)}
+                        onChange={(event) => {
+                            const nextRole = event.target.value;
+                            navigate(nextRole === "Zone Admin" ? "/zone/dashboard" : nextRole === "Enterprise Admin" ? "/enterprise/dashboard" : "/dashboard");
+                        }}
                     >
-                        <option value="User">User</option>
-                        <option value="Admin">Admin</option>
+                        <option value="Consumer">Consumer</option>
+                        <option value="Zone Admin">Zone Admin</option>
+                        <option value="Enterprise Admin">Enterprise Admin</option>
                     </select>
                 </div>
 

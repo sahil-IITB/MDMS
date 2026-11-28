@@ -9,6 +9,15 @@ import BillDetails from "../features/end-user/pages/BillDetails";
 import MeterData from "../features/end-user/pages/MeterData";
 import Alerts from "../features/end-user/pages/Alerts";
 import ProfileSettings from "../features/end-user/pages/ProfileSettings";
+import {
+    ZoneAlerts,
+    ZoneDashboard,
+    ZoneMeterDetails,
+    ZoneMeters,
+    ZoneReports,
+    ZoneSettings,
+    ZoneUsers,
+} from "../features/zone-admin/pages/ZoneAdminPages";
 
 function PlaceholderPage({title}: {title:string}) {
     return (
@@ -39,26 +48,30 @@ function AppRoutes() {
             </Route>
 
             {/* ================= ZONE ADMIN MODULE ================= */}
-            <Route path="/zone" element={<Navigate to="/zone/dashboard" replace />} />
-            <Route path="/zone/dashboard" element={<PlaceholderPage title="Zone Dashboard" />} />
-            <Route path="/zone/meters" element={<PlaceholderPage title="Zone Meter Management" />} />
-            <Route path="/zone/meters/:meterId" element={<PlaceholderPage title="Zone Meter Details" />} />
-            <Route path="/zone/users" element={<PlaceholderPage title="Zone User Management" />} />
-            <Route path="/zone/reports" element={<PlaceholderPage title="Zone Reports & Analytics" />} />
-            <Route path="/zone/alerts" element={<PlaceholderPage title="Zone Alerts" />} />
-            <Route path="/zone/settings" element={<PlaceholderPage title="Zone Settings" />} />
+            <Route element={<AppLayout />}>
+                <Route path="/zone" element={<Navigate to="/zone/dashboard" replace />} />
+                <Route path="/zone/dashboard" element={<ZoneDashboard />} />
+                <Route path="/zone/meters" element={<ZoneMeters />} />
+                <Route path="/zone/meters/:meterId" element={<ZoneMeterDetails />} />
+                <Route path="/zone/users" element={<ZoneUsers />} />
+                <Route path="/zone/reports" element={<ZoneReports />} />
+                <Route path="/zone/alerts" element={<ZoneAlerts />} />
+                <Route path="/zone/settings" element={<ZoneSettings />} />
+            </Route>
 
             {/* ================= ENTERPRISE MODULE ================= */}
-            <Route path="/enterprise" element={<Navigate to={"/enterprise/dashboard"}/>} />
-            <Route path="/enterprise/dashboard" element={<PlaceholderPage title="Enterprise Dashboard" />} />
-            <Route path="/enterprise/zones" element={<PlaceholderPage title="Zone Management" />} />
-            <Route path="/enterprise/zones/:zoneId" element={<PlaceholderPage title="Zone Details" />} />
-            <Route path="/enterprise/meters" element={<PlaceholderPage title="Enterprise Meter Management" />} />
-            <Route path="/enterprise/users" element={<PlaceholderPage title="Enterprise User & Role Management" />} />
-            <Route path="/enterprise/reports" element={<PlaceholderPage title="Enterprise Reports & Analytics" />} />
-            <Route path="/enterprise/alerts" element={<PlaceholderPage title="Enterprise Alerts" />} />
-            <Route path="/enterprise/audit-logs" element={<PlaceholderPage title="Audit Logs" />} />
-            <Route path="/enterprise/settings" element={<PlaceholderPage title="Enterprise Settings & Configuration" />} />
+            <Route element={<AppLayout />}>
+                <Route path="/enterprise" element={<Navigate to="/enterprise/dashboard" replace />} />
+                <Route path="/enterprise/dashboard" element={<PlaceholderPage title="Enterprise Dashboard" />} />
+                <Route path="/enterprise/zones" element={<PlaceholderPage title="Zone Management" />} />
+                <Route path="/enterprise/zones/:zoneId" element={<PlaceholderPage title="Zone Details" />} />
+                <Route path="/enterprise/meters" element={<PlaceholderPage title="Enterprise Meter Management" />} />
+                <Route path="/enterprise/users" element={<PlaceholderPage title="Enterprise User & Role Management" />} />
+                <Route path="/enterprise/reports" element={<PlaceholderPage title="Enterprise Reports & Analytics" />} />
+                <Route path="/enterprise/alerts" element={<PlaceholderPage title="Enterprise Alerts" />} />
+                <Route path="/enterprise/audit-logs" element={<PlaceholderPage title="Audit Logs" />} />
+                <Route path="/enterprise/settings" element={<PlaceholderPage title="Enterprise Settings & Configuration" />} />
+            </Route>
 
             {/* ================= DEFAULT ROUTES ================= */}
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
